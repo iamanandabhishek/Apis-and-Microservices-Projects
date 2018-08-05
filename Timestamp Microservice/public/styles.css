@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+body {
+    font-family: 'Merriweather', serif;
+}
 h1 {
     text-align: center;
+}
+main, section {
+    text-align: center;
+    /* background: #eee; */
+    margin: 30px 0;
+}
+ol {
+    width: 50%;
+    margin: auto;
+
+}
+li {
+    text-align: left;
+    padding: 7px;
+}
+.example-links {
+    display: flex;
+    flex-flow: column nowrap;
+}
+a {
+    margin: 3px;
 }

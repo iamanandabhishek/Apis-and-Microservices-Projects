@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,37 @@
     <title>Timestamp Microservice</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <h1>API Project: Timestamp Microservice</h1>
-    <h3>User Stories</h3>
+    <main>
+        <h3>User Stories:</h3>
+        <ol>
+            <li>The API endpoint is <code>localhost:1337/api/timestamp/:date_string?</code></li>
+            <li>A date string if valid can be successfully parsed.</li>
+            <li>If the date string is empty, the service uses the current timestamp.</li>
+            <li>If the date string is valid the api returns a JSON having the structure</li>
+            <li>If the date string is invalid the api returns a JSON having the structure
+                <code>{"error" : "Invalid Date" }</code>
+            </li>
+        </ol>
+    </main>
+
+    <section>
+        <h3>Example Usage:</h3>
+        <div class = "example-links">
+            <a href="http://localhost:1337/api/timestamp/2015-12-25" target = "_blank">localhost:1337/api/timestamp/2015-12-25</a>
+            <a href="http://localhost:1337/api/timestamp/1451001600000" target = "_blank">localhost:1337/api/timestamp/1450137600000</a>
+            <a href="http://localhost:1337/api/timestamp/10 10 1000" target = "_blank">http://localhost:1337/api/timestamp/10 10 1000</a>
+        </div>
+
+    </section>
+    <section>
+        <h3>Example Output:</h3>
+        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+    </section>
+
+
 </body>
+
 </html>
