@@ -33,9 +33,9 @@ In the terminal it should say which port the server it's running on, if it's loc
 * If the date string is invalid the api returns a JSON having the structure `{"error" : "Invalid Date" }`
 
 ## Example Usage:
-* localhost:1337/api/timestamp/2015-12-25
-* localhost:1337/api/timestamp/1450137600000
-* http://localhost:1337/api/timestamp/10 10 1000
+* [localhost:1337/api/timestamp/2015-12-25](localhost:1337/api/timestamp/2015-12-25)
+* [localhost:1337/api/timestamp/1450137600000](localhost:1337/api/timestamp/1450137600000)
+* [localhost:1337/api/timestamp/10 10 1000](http://localhost:1337/api/timestamp/10 10 1000)
 
 ## Example Output:
 `{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}`
