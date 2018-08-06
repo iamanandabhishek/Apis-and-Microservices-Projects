@@ -3,7 +3,13 @@ body {
     font-family: 'Merriweather', serif;
 }
 
-main, section, h1 {
+main, section, footer, h1 {
     text-align: center;
     margin: 50px;
+}
+
+footer {
+    position: relative;
+    top: 100px;
+    font-size: 0.75em;
 }
