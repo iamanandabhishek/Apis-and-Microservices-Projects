@@ -58,8 +58,8 @@ app.get("/api/shorturl/:id", (req, res) => {
         });
     } else {
         res.send({
-            "error": "invalid URL"
-        })
+            "error": "Wrong Format"
+        });
     }
 
 })

@@ -1,4 +1,3 @@
-console.log("here");
 document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
     axios.post("/api/shorturl/new", {

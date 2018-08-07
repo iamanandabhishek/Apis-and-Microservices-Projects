@@ -1,22 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>URL Shortener</title>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <form >
-        <label for="">
-            test
-                <input type="text">
-        </label>
-        <button> click</button>
-       
-    </form>
+    <h1>URL Shortener</h1>
+    <main>
+        <h3>User stories:</h3>
+        <!-- I can POST a URL to [project_url]/api/shorturl/new and I will receive a shortened URL in the JSON response. Example : {"original_url":"www.google.com","short_url":1}
+        If I pass an invalid URL that doesn't follow the http(s)://www.example.com(/more/routes) format, the JSON response
+        will contain an error like  HINT: to be sure that the submitted url points to a valid site
+        you can use the function dns.lookup(host, cb) from the dns core module. When I visit the shortened URL, it will redirect
+        me to my original link. -->
+        <ol>
+            <li>
+                Users can make a POST request to
+                <code>http://localhost:1337/api/shorturl/new</code> and will receive a shortened link in response.
+            </li>
+            <li>
+                If the link is invalid, the user gets response
+                <code>{"error":"invalid URL"}</code>
+            </li>
+            <li>When the user visits the shortened link, they are redirected to the original link.</li>
+        </ol>
+    </main>
+    <section>
+        <h3>Short URL Creation</h3>
+        <p>
+            <strong>Example:</strong> POST
+            <code>localhost:1337/api/shorturl/new - https://www.google.com</code>
+        </p>
+
+        <div class="row">
+            <form class="col s12">
+                <div class="row form_inline">
+                    <div class="input-field col s4 offset-s3 inline">
+                        <input id="input1" type="text">
+                        <label for="input1">URL to be shortened</label>
+
+                    </div>
+                    <div class="col s3">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+
+
+                </div>
+
+            </form>
+        </div>
+
+    </section>
+    <section>
+        <h3>Example Usage:</h3>
+        <a href="http://localhost:1337/api/shorturl/0">localhost:1337/api/shorturl/0</a>
+    </section>
+    <section>
+        <h3>Will Redirect to:</h3>
+        <p>
+            <code>https://www.google.com</code>
+        </p>
+    </section>
+    <footer>Made By
+        <a href="https://github.com/ezioda004">ezioda004</a>
+    </footer>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
