@@ -33,3 +33,6 @@ h3 {
     align-self: center;
     margin-left: 0 !important;
 }
+.hide {
+    display: none;
+}
