@@ -1,8 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const db = require("./secret/secret");
 
 const app = express();
+
+mongoose.connect(db.key, { useNewUrlParser: true });
 
 const PORT = process.env.PORT || 1337;
 

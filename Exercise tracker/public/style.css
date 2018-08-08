@@ -1,0 +1,23 @@
+h1 {
+  text-align: center;
+  font-size: 3.5em;
+}
+
+form .row {
+  margin-bottom: 0;
+}
+
+label {
+  padding-left: 10px !important;
+}
+
+.active {
+  -webkit-transform: translateY(-22px) !important;
+          transform: translateY(-22px) !important;
+  font-size: 0.8rem !important;
+}
+
+.code {
+  margin: 20px 0 10px 0 !important;
+}
+/*# sourceMappingURL=style.css.map */
