@@ -21,6 +21,7 @@ app.get("/", (req, res) => {
 app.get("/api/fileanalyse", (req, res) => {
     if (dataToSend) {
         res.send(dataToSend);
+        dataToSend = null;
     } else {
         res.send("Please choose a file");
     }

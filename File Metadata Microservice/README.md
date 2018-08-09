@@ -7,7 +7,6 @@ A fullstack app which gives details about the user uploaded file.
 - [Installation](#installation)
 - [User Stories](#UserStories)
 - [Example Usage](#ExampleUsage)
-- [Example Output](#ExampleOutput)
 - [Live Preview](#LivePreview)
 
 ## Installation
@@ -38,25 +37,8 @@ In the terminal it should say which port the server it's running on, if it's loc
 
 ## Example Usage:
 
-- POST `http://localhost:1337/api/exercise/log?userId=7WIPsFRGa&limit=1`
-
-## Example Output:
-
-```
-{
-    _id: "7WIPsFRGa",
-    username: "monkaS",
-    log: [
-            {
-            date: "2018-02-02T00:00:00.000Z",
-            description: "asad",
-            duration: 2
-            }
-        ],
-    count: 4
-}
-```
+- Go to the main page, and upload a file using the provided form.
 
 ## Live Preview:
 
-The live preview of the app can be found here => https://sore-birch.glitch.me/
+The live preview of the app can be found here => https://warm-silk.glitch.me/
