@@ -3,7 +3,7 @@ document.querySelector("form").addEventListener("submit", function(e){
     document.querySelector(".preloader").classList.remove("hide");
     const file = e.target.querySelector("input");
     const formData = new FormData();
-    formData.append("file", file.files[0]);
+    formData.append("upfile", file.files[0]);
     
     console.log(file.value, file.files[0]);
 

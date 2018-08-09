@@ -4,3 +4,7 @@ main, section, h1 {
 li {
     list-style-position: inside;
 }
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 50px;
+}

@@ -27,8 +27,8 @@ app.get("/api/fileanalyse", (req, res) => {
 
 })
 
-//upload.single(filename) should be same as in the form, or you'll waste 3hrs ripping your hair apart like me.
-app.post("/api/fileanalyse", upload.single("file"), function (req, res) {
+//upload.single(filename) should be same as in the form (in this case from script.js), or you'll waste 3hrs ripping your hair apart like me.
+app.post("/api/fileanalyse", upload.single("upfile"), function (req, res) {
     if (req.file) {
         dataToSend = {
             name: req.file.originalname,
