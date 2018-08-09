@@ -8,7 +8,6 @@ const formHandler = (e) => {
                 username: input[0].value
             }).then(res => {
                 window.location.href = res.data.redirect;
-                console.log(res)
             })
             .catch(err => console.log(err));
 
@@ -18,7 +17,6 @@ const formHandler = (e) => {
         axios.post("/api/exercise/add", {
             details
         }).then(res => {
-            console.log(res);
             window.location.href = res.data.redirect;
         }).catch(err => console.log(err));
     }

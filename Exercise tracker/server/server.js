@@ -1,13 +1,17 @@
+//Project init
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 const db = require("./secret/secret");
 const bodyParser = require("body-parser");
 const User = require("./model/user");
+
+//config
 const app = express();
 
 let tmpId, tmpData;
 
+//Connect DB, add your key here
 mongoose.connect(db.key, {
     useNewUrlParser: true
 });
@@ -23,6 +27,8 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../views", "index.html"));
 });
 
+
+//New user route
 app.get("/api/exercise/new-user", (req, res) => {
     if (tmpId == "username") {
         res.send("username already taken");
@@ -42,6 +48,7 @@ app.get("/api/exercise/new-user", (req, res) => {
     tmpId = null;
 })
 
+//GET route to get all users
 app.get("/api/exercise/users", (req, res) => {
     User.find({}, "_id username", (err, users) => {
         if (err) return new Error(err).message;
@@ -49,6 +56,7 @@ app.get("/api/exercise/users", (req, res) => {
     })
 });
 
+//Adding exercise route
 app.get("/api/exercise/add", (req, res) => {
     if (tmpId == "unknown") {
         res.send("unknown _id");
@@ -68,6 +76,7 @@ app.get("/api/exercise/add", (req, res) => {
     tmpId = null;
 })
 
+//Logging exercise route
 app.get("/api/exercise/log?", (req, res) => {
     User.findOne({
         _id: req.query.userId
@@ -87,6 +96,7 @@ app.get("/api/exercise/log?", (req, res) => {
     })
 });
 
+//Post route to get new user
 app.post("/api/exercise/new-user", (req, res) => {
     const userRecieve = req.body.username;
     if (userRecieve === "") {
@@ -119,6 +129,7 @@ app.post("/api/exercise/new-user", (req, res) => {
     });
 });
 
+//Register new user 
 app.post("/api/exercise/add", (req, res) => {
     const userRecieve = req.body.details;
     User.findById(userRecieve._id, (err, user) => {
