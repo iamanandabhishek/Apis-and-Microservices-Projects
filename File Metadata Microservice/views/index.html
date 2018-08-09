@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>File Metadata Mircoservice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="title">File Metadata Microservice</h1>
+    <main>
+
+        <h4>
+            User Stories:
+        </h4>
+        <ol>
+            <li> I can submit a form object that includes a file upload.</li>
+            <li>The from file input field has the "name" attribute set to "upfile".</li>
+            <li>When I submit something, I will receive the file name, and size in bytes within the JSON response.
+            </li>
+        </ol>
+    </main>
+    <section>
+        <div class="row">
+            <div class="col s8 offset-s2">
+                <form action="#">
+                    <div class="file-field input-field">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 offset-s3">
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Upload
+                                <i class="material-icons right">file_upload</i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

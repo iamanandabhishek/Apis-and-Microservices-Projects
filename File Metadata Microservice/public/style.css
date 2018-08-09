@@ -1,0 +1,6 @@
+main, section, h1 {
+    text-align: center;
+}
+li {
+    list-style-position: inside;
+}
